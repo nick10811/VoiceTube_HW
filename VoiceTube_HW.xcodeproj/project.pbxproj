@@ -13,6 +13,15 @@
 		942958D220A99B69004A78DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942958D120A99B69004A78DF /* Assets.xcassets */; };
 		942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958D320A99B69004A78DF /* LaunchScreen.storyboard */; };
 		942958E020A99B6A004A78DF /* VoiceTube_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */; };
+		942958EC20A9A714004A78DF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958EB20A9A714004A78DF /* VideoModel.swift */; };
+		942958FF20A9A929004A78DF /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958EE20A9A929004A78DF /* HttpClient.swift */; };
+		9429590E20A9A929004A78DF /* HttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958FE20A9A929004A78DF /* HttpConnection.swift */; };
+		9429591120A9A9D4004A78DF /* Founctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429591020A9A9D4004A78DF /* Founctions.swift */; };
+		9429591320A9ABF1004A78DF /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429591220A9ABF1004A78DF /* VideoService.swift */; };
+		9429591D20A9B23E004A78DF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591920A9B23D004A78DF /* Alamofire.framework */; };
+		9429591E20A9B23E004A78DF /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591A20A9B23D004A78DF /* Reachability.framework */; };
+		9429591F20A9B23E004A78DF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591B20A9B23D004A78DF /* SwiftyJSON.framework */; };
+		9429592020A9B23E004A78DF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591C20A9B23D004A78DF /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,15 @@
 		942958DB20A99B6A004A78DF /* VoiceTube_HWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTube_HWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTube_HWTests.swift; sourceTree = "<group>"; };
 		942958E120A99B6A004A78DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942958EB20A9A714004A78DF /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
+		942958EE20A9A929004A78DF /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		942958FE20A9A929004A78DF /* HttpConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpConnection.swift; sourceTree = "<group>"; };
+		9429591020A9A9D4004A78DF /* Founctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Founctions.swift; sourceTree = "<group>"; };
+		9429591220A9ABF1004A78DF /* VideoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoService.swift; sourceTree = "<group>"; };
+		9429591920A9B23D004A78DF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		9429591A20A9B23D004A78DF /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
+		9429591B20A9B23D004A78DF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		9429591C20A9B23D004A78DF /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +61,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429591D20A9B23E004A78DF /* Alamofire.framework in Frameworks */,
+				9429591E20A9B23E004A78DF /* Reachability.framework in Frameworks */,
+				9429591F20A9B23E004A78DF /* SwiftyJSON.framework in Frameworks */,
+				9429592020A9B23E004A78DF /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +84,7 @@
 				942958C920A99B68004A78DF /* VoiceTube_HW */,
 				942958DE20A99B6A004A78DF /* VoiceTube_HWTests */,
 				942958C820A99B68004A78DF /* Products */,
+				9429591820A9B23D004A78DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +102,9 @@
 			children = (
 				942958CA20A99B68004A78DF /* AppDelegate.swift */,
 				942958CC20A99B68004A78DF /* ViewController.swift */,
+				9429590F20A9A9D4004A78DF /* Utiles */,
+				942958ED20A9A8E5004A78DF /* Network */,
+				942958EA20A9A6E8004A78DF /* Model */,
 				942958CE20A99B68004A78DF /* Main.storyboard */,
 				942958D120A99B69004A78DF /* Assets.xcassets */,
 				942958D320A99B69004A78DF /* LaunchScreen.storyboard */,
@@ -96,6 +122,51 @@
 			path = VoiceTube_HWTests;
 			sourceTree = "<group>";
 		};
+		942958EA20A9A6E8004A78DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				942958EB20A9A714004A78DF /* VideoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		942958ED20A9A8E5004A78DF /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				942958EE20A9A929004A78DF /* HttpClient.swift */,
+				942958FE20A9A929004A78DF /* HttpConnection.swift */,
+				942958EF20A9A929004A78DF /* Services */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		942958EF20A9A929004A78DF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9429591220A9ABF1004A78DF /* VideoService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9429590F20A9A9D4004A78DF /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				9429591020A9A9D4004A78DF /* Founctions.swift */,
+			);
+			path = Utiles;
+			sourceTree = "<group>";
+		};
+		9429591820A9B23D004A78DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9429591920A9B23D004A78DF /* Alamofire.framework */,
+				9429591A20A9B23D004A78DF /* Reachability.framework */,
+				9429591C20A9B23D004A78DF /* SDWebImage.framework */,
+				9429591B20A9B23D004A78DF /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +177,7 @@
 				942958C320A99B68004A78DF /* Sources */,
 				942958C420A99B68004A78DF /* Frameworks */,
 				942958C520A99B68004A78DF /* Resources */,
+				9429591620A9ADB9004A78DF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,12 +264,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9429591620A9ADB9004A78DF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Reachability.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		942958C320A99B68004A78DF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429590E20A9A929004A78DF /* HttpConnection.swift in Sources */,
 				942958CD20A99B68004A78DF /* ViewController.swift in Sources */,
+				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
+				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
+				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
+				942958FF20A9A929004A78DF /* HttpClient.swift in Sources */,
 				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +457,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDFS53L46Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,6 +479,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDFS53L46Q;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

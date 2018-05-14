@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let serverIP = "https://api.voicetube.com/thirdparty/test.php"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
