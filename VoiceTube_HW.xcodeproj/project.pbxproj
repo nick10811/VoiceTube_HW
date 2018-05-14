@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958CA20A99B68004A78DF /* AppDelegate.swift */; };
+		942958CD20A99B68004A78DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958CC20A99B68004A78DF /* ViewController.swift */; };
+		942958D020A99B68004A78DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958CE20A99B68004A78DF /* Main.storyboard */; };
+		942958D220A99B69004A78DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942958D120A99B69004A78DF /* Assets.xcassets */; };
+		942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958D320A99B69004A78DF /* LaunchScreen.storyboard */; };
+		942958E020A99B6A004A78DF /* VoiceTube_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		942958DC20A99B6A004A78DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 942958BF20A99B68004A78DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 942958C620A99B68004A78DF;
+			remoteInfo = VoiceTube_HW;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		942958C720A99B68004A78DF /* VoiceTube_HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceTube_HW.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942958CA20A99B68004A78DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		942958CC20A99B68004A78DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		942958CF20A99B68004A78DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		942958D120A99B69004A78DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		942958D420A99B69004A78DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		942958D620A99B6A004A78DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		942958DB20A99B6A004A78DF /* VoiceTube_HWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTube_HWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTube_HWTests.swift; sourceTree = "<group>"; };
+		942958E120A99B6A004A78DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		942958C420A99B68004A78DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942958D820A99B6A004A78DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		942958BE20A99B68004A78DF = {
+			isa = PBXGroup;
+			children = (
+				942958C920A99B68004A78DF /* VoiceTube_HW */,
+				942958DE20A99B6A004A78DF /* VoiceTube_HWTests */,
+				942958C820A99B68004A78DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		942958C820A99B68004A78DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				942958C720A99B68004A78DF /* VoiceTube_HW.app */,
+				942958DB20A99B6A004A78DF /* VoiceTube_HWTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		942958C920A99B68004A78DF /* VoiceTube_HW */ = {
+			isa = PBXGroup;
+			children = (
+				942958CA20A99B68004A78DF /* AppDelegate.swift */,
+				942958CC20A99B68004A78DF /* ViewController.swift */,
+				942958CE20A99B68004A78DF /* Main.storyboard */,
+				942958D120A99B69004A78DF /* Assets.xcassets */,
+				942958D320A99B69004A78DF /* LaunchScreen.storyboard */,
+				942958D620A99B6A004A78DF /* Info.plist */,
+			);
+			path = VoiceTube_HW;
+			sourceTree = "<group>";
+		};
+		942958DE20A99B6A004A78DF /* VoiceTube_HWTests */ = {
+			isa = PBXGroup;
+			children = (
+				942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */,
+				942958E120A99B6A004A78DF /* Info.plist */,
+			);
+			path = VoiceTube_HWTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		942958C620A99B68004A78DF /* VoiceTube_HW */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942958E420A99B6A004A78DF /* Build configuration list for PBXNativeTarget "VoiceTube_HW" */;
+			buildPhases = (
+				942958C320A99B68004A78DF /* Sources */,
+				942958C420A99B68004A78DF /* Frameworks */,
+				942958C520A99B68004A78DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoiceTube_HW;
+			productName = VoiceTube_HW;
+			productReference = 942958C720A99B68004A78DF /* VoiceTube_HW.app */;
+			productType = "com.apple.product-type.application";
+		};
+		942958DA20A99B6A004A78DF /* VoiceTube_HWTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942958E720A99B6A004A78DF /* Build configuration list for PBXNativeTarget "VoiceTube_HWTests" */;
+			buildPhases = (
+				942958D720A99B6A004A78DF /* Sources */,
+				942958D820A99B6A004A78DF /* Frameworks */,
+				942958D920A99B6A004A78DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				942958DD20A99B6A004A78DF /* PBXTargetDependency */,
+			);
+			name = VoiceTube_HWTests;
+			productName = VoiceTube_HWTests;
+			productReference = 942958DB20A99B6A004A78DF /* VoiceTube_HWTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		942958BF20A99B68004A78DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Nick Yang";
+				TargetAttributes = {
+					942958C620A99B68004A78DF = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					942958DA20A99B6A004A78DF = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = 942958C620A99B68004A78DF;
+					};
+				};
+			};
+			buildConfigurationList = 942958C220A99B68004A78DF /* Build configuration list for PBXProject "VoiceTube_HW" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 942958BE20A99B68004A78DF;
+			productRefGroup = 942958C820A99B68004A78DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				942958C620A99B68004A78DF /* VoiceTube_HW */,
+				942958DA20A99B6A004A78DF /* VoiceTube_HWTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		942958C520A99B68004A78DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */,
+				942958D220A99B69004A78DF /* Assets.xcassets in Resources */,
+				942958D020A99B68004A78DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942958D920A99B6A004A78DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		942958C320A99B68004A78DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942958CD20A99B68004A78DF /* ViewController.swift in Sources */,
+				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		942958D720A99B6A004A78DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942958E020A99B6A004A78DF /* VoiceTube_HWTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		942958DD20A99B6A004A78DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 942958C620A99B68004A78DF /* VoiceTube_HW */;
+			targetProxy = 942958DC20A99B6A004A78DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		942958CE20A99B68004A78DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942958CF20A99B68004A78DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		942958D320A99B69004A78DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942958D420A99B69004A78DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		942958E220A99B6A004A78DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		942958E320A99B6A004A78DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		942958E520A99B6A004A78DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDFS53L46Q;
+				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nick10811.VoiceTube-HW";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		942958E620A99B6A004A78DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDFS53L46Q;
+				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nick10811.VoiceTube-HW";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		942958E820A99B6A004A78DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDFS53L46Q;
+				INFOPLIST_FILE = VoiceTube_HWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nick10811.VoiceTube-HWTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceTube_HW.app/VoiceTube_HW";
+			};
+			name = Debug;
+		};
+		942958E920A99B6A004A78DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDFS53L46Q;
+				INFOPLIST_FILE = VoiceTube_HWTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nick10811.VoiceTube-HWTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoiceTube_HW.app/VoiceTube_HW";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		942958C220A99B68004A78DF /* Build configuration list for PBXProject "VoiceTube_HW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942958E220A99B6A004A78DF /* Debug */,
+				942958E320A99B6A004A78DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942958E420A99B6A004A78DF /* Build configuration list for PBXNativeTarget "VoiceTube_HW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942958E520A99B6A004A78DF /* Debug */,
+				942958E620A99B6A004A78DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942958E720A99B6A004A78DF /* Build configuration list for PBXNativeTarget "VoiceTube_HWTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942958E820A99B6A004A78DF /* Debug */,
+				942958E920A99B6A004A78DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 942958BF20A99B68004A78DF /* Project object */;
+}
