@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958CA20A99B68004A78DF /* AppDelegate.swift */; };
-		942958CD20A99B68004A78DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958CC20A99B68004A78DF /* ViewController.swift */; };
+		942958CD20A99B68004A78DF /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958CC20A99B68004A78DF /* RootViewController.swift */; };
 		942958D020A99B68004A78DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958CE20A99B68004A78DF /* Main.storyboard */; };
 		942958D220A99B69004A78DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942958D120A99B69004A78DF /* Assets.xcassets */; };
 		942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958D320A99B69004A78DF /* LaunchScreen.storyboard */; };
@@ -22,6 +22,8 @@
 		9429591E20A9B23E004A78DF /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591A20A9B23D004A78DF /* Reachability.framework */; };
 		9429591F20A9B23E004A78DF /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591B20A9B23D004A78DF /* SwiftyJSON.framework */; };
 		9429592020A9B23E004A78DF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591C20A9B23D004A78DF /* SDWebImage.framework */; };
+		9429592620A9D698004A78DF /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592520A9D698004A78DF /* VideoTableViewController.swift */; };
+		9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592720A9D6A7004A78DF /* SettingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		942958C720A99B68004A78DF /* VoiceTube_HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoiceTube_HW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942958CA20A99B68004A78DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		942958CC20A99B68004A78DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		942958CC20A99B68004A78DF /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		942958CF20A99B68004A78DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		942958D120A99B69004A78DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		942958D420A99B69004A78DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +56,8 @@
 		9429591A20A9B23D004A78DF /* Reachability.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Reachability.framework; path = Carthage/Build/iOS/Reachability.framework; sourceTree = "<group>"; };
 		9429591B20A9B23D004A78DF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		9429591C20A9B23D004A78DF /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		9429592520A9D698004A78DF /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
+		9429592720A9D6A7004A78DF /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +198,9 @@
 		9429592420A9C26F004A78DF /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				942958CC20A99B68004A78DF /* ViewController.swift */,
+				942958CC20A99B68004A78DF /* RootViewController.swift */,
+				9429592520A9D698004A78DF /* VideoTableViewController.swift */,
+				9429592720A9D6A7004A78DF /* SettingTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -322,12 +328,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9429590E20A9A929004A78DF /* HttpConnection.swift in Sources */,
-				942958CD20A99B68004A78DF /* ViewController.swift in Sources */,
+				942958CD20A99B68004A78DF /* RootViewController.swift in Sources */,
 				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
 				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
 				942958FF20A9A929004A78DF /* HttpClient.swift in Sources */,
+				9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */,
 				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
+				9429592620A9D698004A78DF /* VideoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
