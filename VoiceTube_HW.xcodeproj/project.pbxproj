@@ -100,15 +100,13 @@
 		942958C920A99B68004A78DF /* VoiceTube_HW */ = {
 			isa = PBXGroup;
 			children = (
-				942958CA20A99B68004A78DF /* AppDelegate.swift */,
-				942958CC20A99B68004A78DF /* ViewController.swift */,
+				9429592120A9C21E004A78DF /* Application */,
+				9429592220A9C237004A78DF /* Resources */,
 				9429590F20A9A9D4004A78DF /* Utiles */,
 				942958ED20A9A8E5004A78DF /* Network */,
 				942958EA20A9A6E8004A78DF /* Model */,
-				942958CE20A99B68004A78DF /* Main.storyboard */,
-				942958D120A99B69004A78DF /* Assets.xcassets */,
-				942958D320A99B69004A78DF /* LaunchScreen.storyboard */,
-				942958D620A99B6A004A78DF /* Info.plist */,
+				9429592420A9C26F004A78DF /* ViewController */,
+				9429592320A9C25D004A78DF /* View */,
 			);
 			path = VoiceTube_HW;
 			sourceTree = "<group>";
@@ -165,6 +163,40 @@
 				9429591B20A9B23D004A78DF /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9429592120A9C21E004A78DF /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				942958CA20A99B68004A78DF /* AppDelegate.swift */,
+				942958D620A99B6A004A78DF /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9429592220A9C237004A78DF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				942958D120A99B69004A78DF /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9429592320A9C25D004A78DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				942958CE20A99B68004A78DF /* Main.storyboard */,
+				942958D320A99B69004A78DF /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9429592420A9C26F004A78DF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				942958CC20A99B68004A78DF /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,7 +493,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VoiceTube_HW/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +515,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = VoiceTube_HW/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/VoiceTube_HW/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
