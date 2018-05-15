@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class VideoCell: UITableViewCell {
     @IBOutlet weak var videoImageView: UIImageView!
@@ -23,4 +24,8 @@ class VideoCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func setupUI(model: VideoModel) {
+        self.videoImageView.sd_setImage(with: URL(string: model.img), placeholderImage: UIImage(named: "NoImage"))
+        self.videoTitleLabel.text = model.title
+    }
 }

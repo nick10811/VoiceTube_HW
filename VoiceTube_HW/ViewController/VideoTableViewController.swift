@@ -10,6 +10,7 @@ import UIKit
 
 class VideoTableViewController: UITableViewController {
     let cellReuseIdentifier = "VideoCell"
+    let viewModel: VideoViewModel = VideoViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +18,9 @@ class VideoTableViewController: UITableViewController {
         self.tableView.register(UINib(nibName: "VideoCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 20;
+        self.showLoading(show: true)
+        viewModel.loadingDelegate = self
+        viewModel.nextStatus()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,22 +29,18 @@ class VideoTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
+        return viewModel.numberOfSection()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 10
+        return viewModel.numberOfItemsInSection(section: section)
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! VideoCell
-
-        // Configure the cell...
-
+        cell.setupUI(model: viewModel.modelAtIndex(indexPath: indexPath) as! VideoModel)
+        
         return cell
     }
     
@@ -58,4 +58,22 @@ class VideoTableViewController: UITableViewController {
         return UITableViewAutomaticDimension
     }
     
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if viewModel.isLastModel(indexPath: indexPath) {
+            self.showLoading(show: true)
+            viewModel.nextStatus()
+        }
+    }
+}
+
+extension VideoTableViewController: WebServiceLoadingDelegate {
+    func webServiceLoadingDone() {
+        self.showLoading(show: false)
+        self.tableView.reloadData()
+    }
+    
+    func webServiceLoadingFail(code: Int, message: String) {
+        self.showLoading(show: false)
+        self.showAlertWithConfirmTitle(title: "Error(\(code))", message: message)
+    }
 }

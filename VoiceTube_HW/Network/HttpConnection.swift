@@ -24,11 +24,10 @@ class HttpConnectionRequest {
     func post(response:@escaping(JSON)->Void, error:@escaping(Int, String)->Void) {
         let url = serverIP+urlname
         printLog(.debug, "HttpConnection:\(url), dictString: \(dict)" )
-        _ = HttpClient.sharedInstance().request(.post, url, response: { (result) in
+        _ = HttpClient.sharedInstance().request(.post, url, nil, dict, response: { (result) in
             response(result)
         }, error: { (code, message) in
             error(code, message)
         })
-        
     }
 }

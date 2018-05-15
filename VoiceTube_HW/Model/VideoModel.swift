@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class JsonModel {
+class JsonModel: NSObject {
     var jsonDict:JSON
     
     init(jsonDict:JSON){

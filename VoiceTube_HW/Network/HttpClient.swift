@@ -50,6 +50,8 @@ class HttpClient {
                     let json = JSON(value)
                     printLog(.info,"Back:\(String(describing: data.request?.url?.absoluteString)) , Result:\(json)")
                     response(json)
+                } else {
+                    error(-1, "Cannot parse response data")
                 }
                 
             case .failure:
