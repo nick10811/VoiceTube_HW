@@ -92,8 +92,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-5c-aGu">
-                                                    <rect key="frame" x="302" y="7" width="49" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ2-5c-aGu">
+                                                    <rect key="frame" x="300" y="7" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchAutoPlay:" destination="WwK-OL-1QK" eventType="valueChanged" id="Kfu-PC-RPA"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -118,8 +121,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slQ-zX-3F4">
-                                                    <rect key="frame" x="302" y="7" width="49" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="slQ-zX-3F4">
+                                                    <rect key="frame" x="300" y="7" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchsubtitleSync:" destination="WwK-OL-1QK" eventType="valueChanged" id="seX-5t-aSL"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -144,8 +150,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcy-T3-cN3">
-                                                    <rect key="frame" x="302" y="7" width="49" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcy-T3-cN3">
+                                                    <rect key="frame" x="300" y="7" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchStopPlayInSearchVocabulary:" destination="WwK-OL-1QK" eventType="valueChanged" id="M4j-aC-pgB"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -170,8 +179,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-WZ-dsM">
-                                                    <rect key="frame" x="302" y="7" width="49" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDb-WZ-dsM">
+                                                    <rect key="frame" x="300" y="7" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchRecommandVideo:" destination="WwK-OL-1QK" eventType="valueChanged" id="gcF-Fc-kOW"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -196,19 +208,25 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWl-z3-vfi">
-                                                    <rect key="frame" x="279" y="13" width="68" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHx-an-Xxs">
+                                                    <rect key="frame" x="277" y="7" width="70" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="eR3-zs-dGb"/>
+                                                    </constraints>
+                                                    <state key="normal" title="09:00 AM">
+                                                        <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="clickReminderTime:" destination="WwK-OL-1QK" eventType="touchUpInside" id="sob-0W-fFc"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="m8I-FX-5NA" firstAttribute="centerY" secondItem="q7j-zI-PRS" secondAttribute="centerY" id="5s8-GW-x1p"/>
                                                 <constraint firstItem="m8I-FX-5NA" firstAttribute="leading" secondItem="q7j-zI-PRS" secondAttribute="leading" constant="26" id="VPy-z1-df0"/>
+                                                <constraint firstAttribute="trailing" secondItem="XHx-an-Xxs" secondAttribute="trailing" constant="28" id="WHc-Cm-N7i"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="m8I-FX-5NA" secondAttribute="trailing" constant="20" symbolic="YES" id="aZR-vt-kLw"/>
-                                                <constraint firstAttribute="trailing" secondItem="YWl-z3-vfi" secondAttribute="trailing" constant="28" id="nGb-RD-Xwe"/>
-                                                <constraint firstItem="YWl-z3-vfi" firstAttribute="centerY" secondItem="q7j-zI-PRS" secondAttribute="centerY" id="x27-O8-IYA"/>
+                                                <constraint firstItem="XHx-an-Xxs" firstAttribute="centerY" secondItem="q7j-zI-PRS" secondAttribute="centerY" id="cnb-D4-fP9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -221,6 +239,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Ux3-Jf-2uh"/>
+                    <connections>
+                        <outlet property="autoPlaySwitch" destination="QJ2-5c-aGu" id="ekC-Ux-1fk"/>
+                        <outlet property="recommandVideoSwitch" destination="bDb-WZ-dsM" id="qg7-i3-Ne4"/>
+                        <outlet property="reminderTimeButton" destination="XHx-an-Xxs" id="osy-ne-U7z"/>
+                        <outlet property="stopPlayInSearchVocabularySwitch" destination="Zcy-T3-cN3" id="9gY-w6-Jbw"/>
+                        <outlet property="subtitleSyncSwitch" destination="slQ-zX-3F4" id="1aJ-fH-Zxo"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sk9-7E-xcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

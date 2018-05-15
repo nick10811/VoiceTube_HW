@@ -32,6 +32,11 @@
 		9429593620AA7FC1004A78DF /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593520AA7FC1004A78DF /* VideoViewModel.swift */; };
 		9429593920AA8336004A78DF /* BaseVCExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593820AA8336004A78DF /* BaseVCExtenstion.swift */; };
 		9429593B20AA85C9004A78DF /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429593A20AA85C9004A78DF /* MBProgressHUD.framework */; };
+		9429B49D20AAB0F200BF3062 /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B49C20AAB0F200BF3062 /* SettingManager.swift */; };
+		9429B49F20AAB1CE00BF3062 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B49E20AAB1CE00BF3062 /* SettingViewModel.swift */; };
+		9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4A220AABB2800BF3062 /* BaseStringExtenstion.swift */; };
+		9429B4A620AACC2300BF3062 /* TimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429B4A520AACC2300BF3062 /* TimePickerView.xib */; };
+		9429B4A820AACD6100BF3062 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4A720AACD6100BF3062 /* TimePickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,12 @@
 		9429593820AA8336004A78DF /* BaseVCExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCExtenstion.swift; sourceTree = "<group>"; };
 		9429593A20AA85C9004A78DF /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
 		9429593C20AA861A004A78DF /* VoiceTube_HW-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VoiceTube_HW-Bridging-Header.h"; sourceTree = "<group>"; };
+		9429B49C20AAB0F200BF3062 /* SettingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		9429B49E20AAB1CE00BF3062 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		9429B4A220AABB2800BF3062 /* BaseStringExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStringExtenstion.swift; sourceTree = "<group>"; };
+		9429B4A520AACC2300BF3062 /* TimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerView.xib; sourceTree = "<group>"; };
+		9429B4A720AACD6100BF3062 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
+		9429B4A920AAD8A800BF3062 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +139,7 @@
 				942958ED20A9A8E5004A78DF /* Network */,
 				9429593720AA82E7004A78DF /* Extension */,
 				9429593020AA780E004A78DF /* Protocol */,
+				9429B49B20AAB0D200BF3062 /* Manager */,
 				942958EA20A9A6E8004A78DF /* Model */,
 				9429592D20AA764A004A78DF /* View Model */,
 				9429592420A9C26F004A78DF /* ViewController */,
@@ -182,6 +194,7 @@
 		9429591820A9B23D004A78DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9429B4A920AAD8A800BF3062 /* SnapKit.framework */,
 				9429593A20AA85C9004A78DF /* MBProgressHUD.framework */,
 				9429591920A9B23D004A78DF /* Alamofire.framework */,
 				9429591A20A9B23D004A78DF /* Reachability.framework */,
@@ -212,6 +225,7 @@
 		9429592320A9C25D004A78DF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9429B4A420AACC0100BF3062 /* CustomUI */,
 				942958CE20A99B68004A78DF /* Main.storyboard */,
 				9429592920AA6F6C004A78DF /* VideoCell.xib */,
 				9429592B20AA70FD004A78DF /* VideoCell.swift */,
@@ -235,6 +249,7 @@
 			children = (
 				9429592E20AA7682004A78DF /* BaseViewModel.swift */,
 				9429593520AA7FC1004A78DF /* VideoViewModel.swift */,
+				9429B49E20AAB1CE00BF3062 /* SettingViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -252,8 +267,26 @@
 			isa = PBXGroup;
 			children = (
 				9429593820AA8336004A78DF /* BaseVCExtenstion.swift */,
+				9429B4A220AABB2800BF3062 /* BaseStringExtenstion.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9429B49B20AAB0D200BF3062 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9429B49C20AAB0F200BF3062 /* SettingManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9429B4A420AACC0100BF3062 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				9429B4A520AACC2300BF3062 /* TimePickerView.xib */,
+				9429B4A720AACD6100BF3062 /* TimePickerView.swift */,
+			);
+			path = CustomUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9429592A20AA6F6C004A78DF /* VideoCell.xib in Resources */,
+				9429B4A620AACC2300BF3062 /* TimePickerView.xib in Resources */,
 				942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */,
 				942958D220A99B69004A78DF /* Assets.xcassets in Resources */,
 				942958D020A99B68004A78DF /* Main.storyboard in Resources */,
@@ -383,12 +417,16 @@
 			files = (
 				9429590E20A9A929004A78DF /* HttpConnection.swift in Sources */,
 				9429593420AA786A004A78DF /* DataProtocol.swift in Sources */,
+				9429B4A820AACD6100BF3062 /* TimePickerView.swift in Sources */,
 				9429592F20AA7682004A78DF /* BaseViewModel.swift in Sources */,
 				942958CD20A99B68004A78DF /* RootViewController.swift in Sources */,
 				9429593620AA7FC1004A78DF /* VideoViewModel.swift in Sources */,
 				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
+				9429B49F20AAB1CE00BF3062 /* SettingViewModel.swift in Sources */,
 				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
+				9429B49D20AAB0F200BF3062 /* SettingManager.swift in Sources */,
+				9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */,
 				9429592C20AA70FD004A78DF /* VideoCell.swift in Sources */,
 				9429593920AA8336004A78DF /* BaseVCExtenstion.swift in Sources */,
 				942958FF20A9A929004A78DF /* HttpClient.swift in Sources */,

@@ -9,87 +9,58 @@
 import UIKit
 
 class SettingTableViewController: UITableViewController {
+    @IBOutlet weak var autoPlaySwitch: UISwitch!
+    @IBOutlet weak var subtitleSyncSwitch: UISwitch!
+    @IBOutlet weak var stopPlayInSearchVocabularySwitch: UISwitch!
+    @IBOutlet weak var recommandVideoSwitch: UISwitch!
+    @IBOutlet weak var reminderTimeButton: UIButton!
+    
+    let viewModel: SettingViewModel = SettingViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setupUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func setupUI() {
+        self.autoPlaySwitch.isOn = viewModel.getSettingValue(type: .autoPlay).convertToBool()
+        self.subtitleSyncSwitch.isOn = viewModel.getSettingValue(type: .subtitleSync).convertToBool()
+        self.stopPlayInSearchVocabularySwitch.isOn = viewModel.getSettingValue(type: .stopPlayInSearchVocabulary).convertToBool()
+        self.recommandVideoSwitch.isOn = viewModel.getSettingValue(type: .recommandVideo).convertToBool()
+        self.reminderTimeButton.setTitle(viewModel.getSettingValue(type: .reminderTime), for: .normal)
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    @IBAction func switchAutoPlay(_ sender: Any) {
+        viewModel.setSettingValue(String(self.autoPlaySwitch.isOn), type: .autoPlay)
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    
+    @IBAction func switchsubtitleSync(_ sender: Any) {
+        viewModel.setSettingValue(String(self.subtitleSyncSwitch.isOn), type: .subtitleSync)
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    @IBAction func switchStopPlayInSearchVocabulary(_ sender: Any) {
+        viewModel.setSettingValue(String(self.stopPlayInSearchVocabularySwitch.isOn), type: .stopPlayInSearchVocabulary)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+    
+    @IBAction func switchRecommandVideo(_ sender: Any) {
+        viewModel.setSettingValue(String(self.recommandVideoSwitch.isOn), type: .recommandVideo)
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    @IBAction func clickReminderTime(_ sender: Any) {
+        let selectedTime: Date = viewModel.getTimeValue(type: .reminderTime)
+        let pickerView = TimePickerView.instanceFromNib() as! TimePickerView
+        pickerView.show(date: selectedTime) { (pickerDate) in
+            self.viewModel.setTimeValue(pickerDate, type: .reminderTime)
+        }
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
