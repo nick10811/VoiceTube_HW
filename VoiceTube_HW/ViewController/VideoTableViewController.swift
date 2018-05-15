@@ -15,12 +15,22 @@ class VideoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // pull refresh
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.addTarget(self, action:#selector(pullRefresh), for: .valueChanged)
+        
         self.tableView.register(UINib(nibName: "VideoCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
         self.tableView.rowHeight = UITableViewAutomaticDimension;
         self.tableView.estimatedRowHeight = 20;
         self.showLoading(show: true)
         viewModel.loadingDelegate = self
         viewModel.nextStatus()
+    }
+    
+    @objc func pullRefresh() {
+        self.refreshControl?.endRefreshing()
+        self.showLoading(show: true)
+        viewModel.refreshData()
     }
 
     override func didReceiveMemoryWarning() {
