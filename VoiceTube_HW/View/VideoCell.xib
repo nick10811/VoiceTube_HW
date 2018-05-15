@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="300.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoImage" translatesAutoresizingMaskIntoConstraints="NO" id="CUj-Mc-eXI">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CUj-Mc-eXI">
                         <rect key="frame" x="10" y="11" width="355" height="199.5"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="CUj-Mc-eXI" secondAttribute="height" multiplier="1280:720" id="YlV-iH-Efj"/>
@@ -50,7 +50,4 @@
             <point key="canvasLocation" x="6.5" y="-33.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="NoImage" width="24" height="24"/>
-    </resources>
 </document>

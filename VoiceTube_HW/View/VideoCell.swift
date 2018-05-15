@@ -25,7 +25,8 @@ class VideoCell: UITableViewCell {
     }
 
     func setupUI(model: VideoModel) {
-        self.videoImageView.sd_setImage(with: URL(string: model.img), placeholderImage: UIImage(named: "NoImage"))
+        self.videoImageView.sd_setImage(with: URL(string: model.img), placeholderImage: nil)
+        self.videoImageView.sd_imageTransition = .fade
         self.videoTitleLabel.text = model.title
     }
 }
