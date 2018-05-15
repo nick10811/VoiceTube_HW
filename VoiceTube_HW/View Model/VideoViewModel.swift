@@ -12,10 +12,13 @@ class VideoViewModel: BaseViewModel {
     var webService: VideoService = VideoService()
     
     override func loadData() {
+        guard self.isNetworkAvailable() else {
+            return
+        }
         _ = webService.getVideoData(respnose: { (videoArray) in
             self.status = .loadDone
-            self.modelArray = videoArray
-            self.loadingDelegate?.webServiceLoadingDone()
+            DBManager.sharedInstance().resetVideo()
+            self.dataConvert(array: videoArray)
         }, error: { (code, message) in
             self.status = .loadFail
             self.loadingDelegate?.webServiceLoadingFail(code: code, message: message)
@@ -23,14 +26,31 @@ class VideoViewModel: BaseViewModel {
     }
     
     override func loadMoreData() {
+        guard isNetworkAvailable() else {
+            return
+        }
         _ = webService.getVideoData(respnose: { (videoArray) in
             self.status = .loadMoreDone
-            self.modelArray.append(contentsOf: videoArray)
-            self.loadingDelegate?.webServiceLoadingDone()
+            self.dataConvert(array: videoArray)
         }, error: { (code, message) in
             self.status = .loadMoreFail
             self.loadingDelegate?.webServiceLoadingFail(code: code, message: message)
         })
+    }
+    
+    func dataConvert(array: [VideoModel]) {
+        self.modelArray.append(contentsOf: array)
+        DBManager.sharedInstance().batchInsertVideo(modelArray: array)
+        self.loadingDelegate?.webServiceLoadingDone()
+    }
+    
+    func isNetworkAvailable() -> Bool {
+        let isAvailable = HttpClient.sharedInstance().isNetworkAvailable()
+        if !isAvailable {
+            self.modelArray = DBManager.sharedInstance().getVideo()
+            self.loadingDelegate?.webServiceLoadingDone()
+        }
+        return isAvailable
     }
     
     func numberOfSection() -> Int {

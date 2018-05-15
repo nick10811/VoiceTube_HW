@@ -18,8 +18,18 @@ class JsonModel: NSObject {
 }
 
 class VideoModel: JsonModel {
-    var title: String {return jsonDict["title"].stringValue}
-    var img: String {return jsonDict["img"].stringValue}
+    var title: String = ""
+    var img: String = ""
+    
+    override init(jsonDict: JSON) {
+        super.init(jsonDict: jsonDict)
+        self.title = self.jsonDict["title"].stringValue
+        self.img = self.jsonDict["img"].stringValue
+    }
+    
+    init() {
+        super.init(jsonDict: JSON())
+    }
 }
 
 class ResultModel: JsonModel {

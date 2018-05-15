@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Reachability
 
 class HttpClient {
     
@@ -62,6 +63,14 @@ class HttpClient {
             }
         }
         
+    }
+    
+    func isNetworkAvailable() -> Bool {
+        let reachability = Reachability()!
+        if (reachability.connection == .none) {
+            return false
+        }
+        return true
     }
     
 }

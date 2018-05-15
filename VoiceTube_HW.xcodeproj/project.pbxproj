@@ -38,6 +38,14 @@
 		9429B4A620AACC2300BF3062 /* TimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429B4A520AACC2300BF3062 /* TimePickerView.xib */; };
 		9429B4A820AACD6100BF3062 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4A720AACD6100BF3062 /* TimePickerView.swift */; };
 		9429B4AC20AAE6DA00BF3062 /* BaseDateExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4AB20AAE6DA00BF3062 /* BaseDateExtenstion.swift */; };
+		9429B4AE20AB05F800BF3062 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4AD20AB05F800BF3062 /* DBManager.swift */; };
+		9429B4B020AB0EF400BF3062 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429B4AF20AB0EF400BF3062 /* libsqlite3.tbd */; };
+		9429B4BF20AB122800BF3062 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4B420AB122800BF3062 /* FMDatabaseQueue.m */; };
+		9429B4C020AB122800BF3062 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4B720AB122800BF3062 /* FMDatabaseAdditions.m */; };
+		9429B4C120AB122800BF3062 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4B820AB122800BF3062 /* FMDatabase.m */; };
+		9429B4C220AB122800BF3062 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4BC20AB122800BF3062 /* FMDatabasePool.m */; };
+		9429B4C320AB122800BF3062 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4BD20AB122800BF3062 /* FMResultSet.m */; };
+		9429B4C420AB122800BF3062 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9429B4BE20AB122800BF3062 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +96,20 @@
 		9429B4A720AACD6100BF3062 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		9429B4A920AAD8A800BF3062 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		9429B4AB20AAE6DA00BF3062 /* BaseDateExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDateExtenstion.swift; sourceTree = "<group>"; };
+		9429B4AD20AB05F800BF3062 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		9429B4AF20AB0EF400BF3062 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9429B4B320AB122800BF3062 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		9429B4B420AB122800BF3062 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		9429B4B520AB122800BF3062 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		9429B4B620AB122800BF3062 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		9429B4B720AB122800BF3062 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		9429B4B820AB122800BF3062 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		9429B4B920AB122800BF3062 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		9429B4BA20AB122800BF3062 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		9429B4BB20AB122800BF3062 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		9429B4BC20AB122800BF3062 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		9429B4BD20AB122800BF3062 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		9429B4BE20AB122800BF3062 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429B4B020AB0EF400BF3062 /* libsqlite3.tbd in Frameworks */,
 				9429593B20AA85C9004A78DF /* MBProgressHUD.framework in Frameworks */,
 				9429591D20A9B23E004A78DF /* Alamofire.framework in Frameworks */,
 				9429591E20A9B23E004A78DF /* Reachability.framework in Frameworks */,
@@ -137,6 +160,7 @@
 			children = (
 				9429592120A9C21E004A78DF /* Application */,
 				9429592220A9C237004A78DF /* Resources */,
+				9429B4B120AB112C00BF3062 /* third-party */,
 				9429590F20A9A9D4004A78DF /* Utiles */,
 				942958ED20A9A8E5004A78DF /* Network */,
 				9429593720AA82E7004A78DF /* Extension */,
@@ -196,6 +220,7 @@
 		9429591820A9B23D004A78DF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9429B4AF20AB0EF400BF3062 /* libsqlite3.tbd */,
 				9429B4A920AAD8A800BF3062 /* SnapKit.framework */,
 				9429593A20AA85C9004A78DF /* MBProgressHUD.framework */,
 				9429591920A9B23D004A78DF /* Alamofire.framework */,
@@ -279,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				9429B49C20AAB0F200BF3062 /* SettingManager.swift */,
+				9429B4AD20AB05F800BF3062 /* DBManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -290,6 +316,33 @@
 				9429B4A720AACD6100BF3062 /* TimePickerView.swift */,
 			);
 			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		9429B4B120AB112C00BF3062 /* third-party */ = {
+			isa = PBXGroup;
+			children = (
+				9429B4B220AB122800BF3062 /* fmdb */,
+			);
+			path = "third-party";
+			sourceTree = "<group>";
+		};
+		9429B4B220AB122800BF3062 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				9429B4B320AB122800BF3062 /* FMDatabase.h */,
+				9429B4B420AB122800BF3062 /* FMDatabaseQueue.m */,
+				9429B4B520AB122800BF3062 /* FMResultSet.h */,
+				9429B4B620AB122800BF3062 /* FMDatabasePool.h */,
+				9429B4B720AB122800BF3062 /* FMDatabaseAdditions.m */,
+				9429B4B820AB122800BF3062 /* FMDatabase.m */,
+				9429B4B920AB122800BF3062 /* FMDatabaseQueue.h */,
+				9429B4BA20AB122800BF3062 /* FMDB.h */,
+				9429B4BB20AB122800BF3062 /* FMDatabaseAdditions.h */,
+				9429B4BC20AB122800BF3062 /* FMDatabasePool.m */,
+				9429B4BD20AB122800BF3062 /* FMResultSet.m */,
+				9429B4BE20AB122800BF3062 /* Info.plist */,
+			);
+			path = fmdb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,6 +430,7 @@
 			files = (
 				9429592A20AA6F6C004A78DF /* VideoCell.xib in Resources */,
 				9429B4A620AACC2300BF3062 /* TimePickerView.xib in Resources */,
+				9429B4C420AB122800BF3062 /* Info.plist in Resources */,
 				942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */,
 				942958D220A99B69004A78DF /* Assets.xcassets in Resources */,
 				942958D020A99B68004A78DF /* Main.storyboard in Resources */,
@@ -424,18 +478,24 @@
 				9429592F20AA7682004A78DF /* BaseViewModel.swift in Sources */,
 				942958CD20A99B68004A78DF /* RootViewController.swift in Sources */,
 				9429593620AA7FC1004A78DF /* VideoViewModel.swift in Sources */,
+				9429B4C320AB122800BF3062 /* FMResultSet.m in Sources */,
 				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
 				9429B49F20AAB1CE00BF3062 /* SettingViewModel.swift in Sources */,
 				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
 				9429B4AC20AAE6DA00BF3062 /* BaseDateExtenstion.swift in Sources */,
+				9429B4C020AB122800BF3062 /* FMDatabaseAdditions.m in Sources */,
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
+				9429B4C220AB122800BF3062 /* FMDatabasePool.m in Sources */,
 				9429B49D20AAB0F200BF3062 /* SettingManager.swift in Sources */,
 				9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */,
+				9429B4AE20AB05F800BF3062 /* DBManager.swift in Sources */,
+				9429B4C120AB122800BF3062 /* FMDatabase.m in Sources */,
 				9429592C20AA70FD004A78DF /* VideoCell.swift in Sources */,
 				9429593920AA8336004A78DF /* BaseVCExtenstion.swift in Sources */,
 				942958FF20A9A929004A78DF /* HttpClient.swift in Sources */,
 				9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */,
 				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
+				9429B4BF20AB122800BF3062 /* FMDatabaseQueue.m in Sources */,
 				9429593220AA7855004A78DF /* WebServiceLoadingDelegate.swift in Sources */,
 				9429592620A9D698004A78DF /* VideoTableViewController.swift in Sources */,
 			);
