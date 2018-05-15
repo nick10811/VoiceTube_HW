@@ -18,15 +18,10 @@ enum SettingType: String {
 
 class SettingViewModel: BaseViewModel {
     func getSettingValue(type: SettingType) -> String {
-        switch type {
-        case .autoPlay,
-             .subtitleSync,
-             .stopPlayInSearchVocabulary,
-             .recommandVideo:
+        guard type == .reminderTime else {
             return SettingManager.sharedInstance().load(type.rawValue) ?? "true"
-        case .reminderTime:
-            return SettingManager.sharedInstance().load(type.rawValue) ?? "09:00 AM"
         }
+        return self.getTimeValue(type: .reminderTime).toString()
     }
     
     func setSettingValue(_ value: String, type: SettingType) {
@@ -38,14 +33,16 @@ class SettingViewModel: BaseViewModel {
             return Date()
         }
         
-        return SettingManager.sharedInstance().loadObject(type.rawValue) as! Date
+        if let stored = SettingManager.sharedInstance().loadObject(type.rawValue) {
+            return stored as! Date
+        }
+        return Date()
     }
     
     func setTimeValue(_ date: Date, type: SettingType) {
         guard type == .reminderTime else {
             return
         }
-        
         SettingManager.sharedInstance().saveObject(date as AnyObject, forKey: type.rawValue)
     }
     

@@ -37,6 +37,7 @@
 		9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4A220AABB2800BF3062 /* BaseStringExtenstion.swift */; };
 		9429B4A620AACC2300BF3062 /* TimePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429B4A520AACC2300BF3062 /* TimePickerView.xib */; };
 		9429B4A820AACD6100BF3062 /* TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4A720AACD6100BF3062 /* TimePickerView.swift */; };
+		9429B4AC20AAE6DA00BF3062 /* BaseDateExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4AB20AAE6DA00BF3062 /* BaseDateExtenstion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		9429B4A520AACC2300BF3062 /* TimePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerView.xib; sourceTree = "<group>"; };
 		9429B4A720AACD6100BF3062 /* TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerView.swift; sourceTree = "<group>"; };
 		9429B4A920AAD8A800BF3062 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		9429B4AB20AAE6DA00BF3062 /* BaseDateExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDateExtenstion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			children = (
 				9429593820AA8336004A78DF /* BaseVCExtenstion.swift */,
 				9429B4A220AABB2800BF3062 /* BaseStringExtenstion.swift */,
+				9429B4AB20AAE6DA00BF3062 /* BaseDateExtenstion.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
 				9429B49F20AAB1CE00BF3062 /* SettingViewModel.swift in Sources */,
 				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
+				9429B4AC20AAE6DA00BF3062 /* BaseDateExtenstion.swift in Sources */,
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
 				9429B49D20AAB0F200BF3062 /* SettingManager.swift in Sources */,
 				9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */,
