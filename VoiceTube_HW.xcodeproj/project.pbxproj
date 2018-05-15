@@ -24,6 +24,8 @@
 		9429592020A9B23E004A78DF /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9429591C20A9B23D004A78DF /* SDWebImage.framework */; };
 		9429592620A9D698004A78DF /* VideoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592520A9D698004A78DF /* VideoTableViewController.swift */; };
 		9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592720A9D6A7004A78DF /* SettingTableViewController.swift */; };
+		9429592A20AA6F6C004A78DF /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429592920AA6F6C004A78DF /* VideoCell.xib */; };
+		9429592C20AA70FD004A78DF /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592B20AA70FD004A78DF /* VideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		9429591C20A9B23D004A78DF /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
 		9429592520A9D698004A78DF /* VideoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewController.swift; sourceTree = "<group>"; };
 		9429592720A9D6A7004A78DF /* SettingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewController.swift; sourceTree = "<group>"; };
+		9429592920AA6F6C004A78DF /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
+		9429592B20AA70FD004A78DF /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				942958CE20A99B68004A78DF /* Main.storyboard */,
+				9429592920AA6F6C004A78DF /* VideoCell.xib */,
+				9429592B20AA70FD004A78DF /* VideoCell.swift */,
 				942958D320A99B69004A78DF /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -287,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429592A20AA6F6C004A78DF /* VideoCell.xib in Resources */,
 				942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */,
 				942958D220A99B69004A78DF /* Assets.xcassets in Resources */,
 				942958D020A99B68004A78DF /* Main.storyboard in Resources */,
@@ -332,6 +339,7 @@
 				942958EC20A9A714004A78DF /* VideoModel.swift in Sources */,
 				9429591120A9A9D4004A78DF /* Founctions.swift in Sources */,
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
+				9429592C20AA70FD004A78DF /* VideoCell.swift in Sources */,
 				942958FF20A9A929004A78DF /* HttpClient.swift in Sources */,
 				9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */,
 				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
@@ -502,6 +510,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/VoiceTube_HW/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -524,6 +533,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/VoiceTube_HW/Application/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
