@@ -75,7 +75,6 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="timeDatePicker" destination="5Vt-bv-36P" id="gAo-Yy-DV0"/>
-                <outlet property="timePickerHeightConstraint" destination="zyh-Gm-rCW" id="cc2-Td-TZD"/>
                 <outlet property="timerPickerView" destination="xJu-uX-0Le" id="0iP-Yp-FhD"/>
             </connections>
         </view>

@@ -10,7 +10,6 @@ import UIKit
 
 class TimePickerView: UIView {
     @IBOutlet weak var timerPickerView: UIView!
-    @IBOutlet weak var timePickerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var timeDatePicker: UIDatePicker!
     
     class func instanceFromNib() -> UIView {
