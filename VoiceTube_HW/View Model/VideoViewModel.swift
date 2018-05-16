@@ -21,7 +21,7 @@ class VideoViewModel: BaseViewModel {
             self.dataConvert(array: videoArray)
         }, error: { (code, message) in
             self.status = .loadFail
-            self.loadingDelegate?.webServiceLoadingFail(code: code, message: message)
+            self.loadingDelegate?.loadingFail(code: code, message: message)
         })
     }
     
@@ -34,21 +34,21 @@ class VideoViewModel: BaseViewModel {
             self.dataConvert(array: videoArray)
         }, error: { (code, message) in
             self.status = .loadMoreFail
-            self.loadingDelegate?.webServiceLoadingFail(code: code, message: message)
+            self.loadingDelegate?.loadingFail(code: code, message: message)
         })
     }
     
     func dataConvert(array: [VideoModel]) {
         self.modelArray.append(contentsOf: array)
         DBManager.sharedInstance().batchInsertVideo(modelArray: array)
-        self.loadingDelegate?.webServiceLoadingDone()
+        self.loadingDelegate?.loadingDone()
     }
     
     func isNetworkAvailable() -> Bool {
         let isAvailable = HttpClient.sharedInstance().isNetworkAvailable()
         if !isAvailable {
             self.modelArray = DBManager.sharedInstance().getVideo()
-            self.loadingDelegate?.webServiceLoadingDone()
+            self.loadingDelegate?.loadingDone()
         }
         return isAvailable
     }

@@ -19,7 +19,7 @@ class SettingTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel.loadingDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,5 +62,15 @@ class SettingTableViewController: UITableViewController {
         pickerView.show(date: selectedTime) { (pickerDate) in
             self.viewModel.setTimeValue(pickerDate, type: .reminderTime)
         }
+    }
+}
+
+extension SettingTableViewController: LoadingDelegate {
+    func loadingDone() {
+        self.setupUI()
+    }
+    
+    func loadingFail(code: Int, message: String) {
+        
     }
 }

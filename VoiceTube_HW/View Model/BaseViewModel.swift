@@ -9,7 +9,7 @@
 import Foundation
 
 class BaseViewModel {
-    var loadingDelegate: WebServiceLoadingDelegate?
+    var loadingDelegate: LoadingDelegate?
     var status: LoadingStatus = .initialize
     var modelArray = [JsonModel]()
     

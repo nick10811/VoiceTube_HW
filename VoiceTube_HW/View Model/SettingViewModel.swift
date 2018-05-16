@@ -26,6 +26,7 @@ class SettingViewModel: BaseViewModel {
     
     func setSettingValue(_ value: String, type: SettingType) {
         SettingManager.sharedInstance().save(value, forKey: type.rawValue)
+        self.loadingDelegate?.loadingDone()
     }
     
     func getTimeValue(type: SettingType) -> Date {
@@ -44,6 +45,7 @@ class SettingViewModel: BaseViewModel {
             return
         }
         SettingManager.sharedInstance().saveObject(date as AnyObject, forKey: type.rawValue)
+        self.loadingDelegate?.loadingDone()
     }
     
 }

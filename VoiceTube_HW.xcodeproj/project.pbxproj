@@ -27,7 +27,7 @@
 		9429592A20AA6F6C004A78DF /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9429592920AA6F6C004A78DF /* VideoCell.xib */; };
 		9429592C20AA70FD004A78DF /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592B20AA70FD004A78DF /* VideoCell.swift */; };
 		9429592F20AA7682004A78DF /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429592E20AA7682004A78DF /* BaseViewModel.swift */; };
-		9429593220AA7855004A78DF /* WebServiceLoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593120AA7855004A78DF /* WebServiceLoadingDelegate.swift */; };
+		9429593220AA7855004A78DF /* LoadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593120AA7855004A78DF /* LoadingDelegate.swift */; };
 		9429593420AA786A004A78DF /* DataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593320AA786A004A78DF /* DataProtocol.swift */; };
 		9429593620AA7FC1004A78DF /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593520AA7FC1004A78DF /* VideoViewModel.swift */; };
 		9429593920AA8336004A78DF /* BaseVCExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429593820AA8336004A78DF /* BaseVCExtenstion.swift */; };
@@ -83,7 +83,7 @@
 		9429592920AA6F6C004A78DF /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		9429592B20AA70FD004A78DF /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		9429592E20AA7682004A78DF /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		9429593120AA7855004A78DF /* WebServiceLoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceLoadingDelegate.swift; sourceTree = "<group>"; };
+		9429593120AA7855004A78DF /* LoadingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingDelegate.swift; sourceTree = "<group>"; };
 		9429593320AA786A004A78DF /* DataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProtocol.swift; sourceTree = "<group>"; };
 		9429593520AA7FC1004A78DF /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
 		9429593820AA8336004A78DF /* BaseVCExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCExtenstion.swift; sourceTree = "<group>"; };
@@ -284,7 +284,7 @@
 		9429593020AA780E004A78DF /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				9429593120AA7855004A78DF /* WebServiceLoadingDelegate.swift */,
+				9429593120AA7855004A78DF /* LoadingDelegate.swift */,
 				9429593320AA786A004A78DF /* DataProtocol.swift */,
 			);
 			path = Protocol;
@@ -496,7 +496,7 @@
 				9429592820A9D6A7004A78DF /* SettingTableViewController.swift in Sources */,
 				942958CB20A99B68004A78DF /* AppDelegate.swift in Sources */,
 				9429B4BF20AB122800BF3062 /* FMDatabaseQueue.m in Sources */,
-				9429593220AA7855004A78DF /* WebServiceLoadingDelegate.swift in Sources */,
+				9429593220AA7855004A78DF /* LoadingDelegate.swift in Sources */,
 				9429592620A9D698004A78DF /* VideoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

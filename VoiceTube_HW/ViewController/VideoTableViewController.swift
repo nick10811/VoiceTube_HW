@@ -76,13 +76,13 @@ class VideoTableViewController: UITableViewController {
     }
 }
 
-extension VideoTableViewController: WebServiceLoadingDelegate {
-    func webServiceLoadingDone() {
+extension VideoTableViewController: LoadingDelegate {
+    func loadingDone() {
         self.showLoading(show: false)
         self.tableView.reloadData()
     }
     
-    func webServiceLoadingFail(code: Int, message: String) {
+    func loadingFail(code: Int, message: String) {
         self.showLoading(show: false)
         self.showAlertWithConfirmTitle(title: "Error(\(code))", message: message)
     }

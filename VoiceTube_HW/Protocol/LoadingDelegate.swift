@@ -18,7 +18,7 @@ enum LoadingStatus {
     case loadMoreFail
 }
 
-protocol WebServiceLoadingDelegate {
-    func webServiceLoadingDone()
-    func webServiceLoadingFail(code: Int, message: String)
+protocol LoadingDelegate {
+    func loadingDone()
+    func loadingFail(code: Int, message: String)
 }
