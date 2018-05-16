@@ -19,6 +19,7 @@ class VideoService: HttpConnectionRequest {
         self.post(response: { (result) in
             let resultModel = ResultModel(jsonDict: result)
             if resultModel.status == "success" {
+                self.errorCode = .success
                 var videoArray = [VideoModel]()
                 for tmp in resultModel.videos {
                     videoArray.append(VideoModel(jsonDict: tmp))
@@ -26,6 +27,7 @@ class VideoService: HttpConnectionRequest {
                 respnose(videoArray)
                 
             } else {
+                self.errorCode = .APIFail
                 error(-1, resultModel.status)
             }
             

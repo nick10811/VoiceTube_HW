@@ -41,7 +41,7 @@ class HttpClient {
     /// - parameter error:        The closure of failed
     ///
     /// - returns: The created `Http Request`.
-    func request(_ method: Alamofire.HTTPMethod, _ url: String, _ headers:[String:String]? = nil, _ parameters:[String:Any]? = nil, response:@escaping (JSON)->(), error:@escaping (Int, String)->()) {
+    func request(_ method: Alamofire.HTTPMethod, _ url: String, _ headers:[String:String]? = nil, _ parameters:[String:Any]? = nil, response:@escaping (JSON)->(), error:@escaping (NetworkError, String)->()) {
         printLog(.info, "Send\(url), para:\(String(describing: parameters))")
         
         sessionManager.request(url, method: method, parameters: parameters, encoding:URLEncoding.default, headers:headers).validate().responseJSON { data -> Void in
@@ -52,14 +52,14 @@ class HttpClient {
                     printLog(.info,"Back:\(String(describing: data.request?.url?.absoluteString)) , Result:\(json)")
                     response(json)
                 } else {
-                    error(-1, "Cannot parse response data")
+                    error(NetworkError.parseDataFail, "Cannot parse response data")
                 }
                 
             case .failure:
                 printLog(.error, "post failed")
                 var message = data.error?.localizedDescription
                 message = message == nil ? "Unstale Network" : message
-                error(-1, message!)
+                error(NetworkError.timeout, message!)
             }
         }
         
