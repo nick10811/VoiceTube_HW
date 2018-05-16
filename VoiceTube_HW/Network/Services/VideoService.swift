@@ -28,7 +28,7 @@ class VideoService: HttpConnectionRequest {
                 
             } else {
                 self.errorCode = .APIFail
-                error(-1, resultModel.status)
+                error(NetworkError.APIFail.rawValue, resultModel.status)
             }
             
         }) { (code, message) in
