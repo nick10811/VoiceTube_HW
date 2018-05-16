@@ -12,7 +12,6 @@
 		942958D020A99B68004A78DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958CE20A99B68004A78DF /* Main.storyboard */; };
 		942958D220A99B69004A78DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 942958D120A99B69004A78DF /* Assets.xcassets */; };
 		942958D520A99B69004A78DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 942958D320A99B69004A78DF /* LaunchScreen.storyboard */; };
-		942958E020A99B6A004A78DF /* VoiceTube_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */; };
 		942958EC20A9A714004A78DF /* VideoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958EB20A9A714004A78DF /* VideoModel.swift */; };
 		942958FF20A9A929004A78DF /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958EE20A9A929004A78DF /* HttpClient.swift */; };
 		9429590E20A9A929004A78DF /* HttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942958FE20A9A929004A78DF /* HttpConnection.swift */; };
@@ -46,6 +45,7 @@
 		9429B4C220AB122800BF3062 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4BC20AB122800BF3062 /* FMDatabasePool.m */; };
 		9429B4C320AB122800BF3062 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4BD20AB122800BF3062 /* FMResultSet.m */; };
 		9429B4C420AB122800BF3062 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9429B4BE20AB122800BF3062 /* Info.plist */; };
+		9429B4C820AC0EFB00BF3062 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		942958D420A99B69004A78DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		942958D620A99B6A004A78DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942958DB20A99B6A004A78DF /* VoiceTube_HWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoiceTube_HWTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTube_HWTests.swift; sourceTree = "<group>"; };
 		942958E120A99B6A004A78DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		942958EB20A9A714004A78DF /* VideoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModel.swift; sourceTree = "<group>"; };
 		942958EE20A9A929004A78DF /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
@@ -110,6 +109,7 @@
 		9429B4BC20AB122800BF3062 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		9429B4BD20AB122800BF3062 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		9429B4BE20AB122800BF3062 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +177,7 @@
 		942958DE20A99B6A004A78DF /* VoiceTube_HWTests */ = {
 			isa = PBXGroup;
 			children = (
-				942958DF20A99B6A004A78DF /* VoiceTube_HWTests.swift */,
+				9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */,
 				942958E120A99B6A004A78DF /* Info.plist */,
 			);
 			path = VoiceTube_HWTests;
@@ -505,7 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942958E020A99B6A004A78DF /* VoiceTube_HWTests.swift in Sources */,
+				9429B4C820AC0EFB00BF3062 /* ExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
