@@ -48,6 +48,7 @@
 		9429B4C820AC0EFB00BF3062 /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */; };
 		9429B4CA20AC13E400BF3062 /* NetworkErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4C920AC13E400BF3062 /* NetworkErrorEnum.swift */; };
 		9429B4CC20AC163C00BF3062 /* VideoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4CB20AC163C00BF3062 /* VideoServiceTests.swift */; };
+		9429B4CE20AC1F1C00BF3062 /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4CD20AC1F1C00BF3062 /* SettingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		9429B4C920AC13E400BF3062 /* NetworkErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorEnum.swift; sourceTree = "<group>"; };
 		9429B4CB20AC163C00BF3062 /* VideoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceTests.swift; sourceTree = "<group>"; };
+		9429B4CD20AC1F1C00BF3062 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 			children = (
 				9429B4C720AC0EFB00BF3062 /* ExtensionTests.swift */,
 				9429B4CB20AC163C00BF3062 /* VideoServiceTests.swift */,
+				9429B4CD20AC1F1C00BF3062 /* SettingViewModelTests.swift */,
 				942958E120A99B6A004A78DF /* Info.plist */,
 			);
 			path = VoiceTube_HWTests;
@@ -512,6 +515,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9429B4CE20AC1F1C00BF3062 /* SettingViewModelTests.swift in Sources */,
 				9429B4C820AC0EFB00BF3062 /* ExtensionTests.swift in Sources */,
 				9429B4CC20AC163C00BF3062 /* VideoServiceTests.swift in Sources */,
 			);
