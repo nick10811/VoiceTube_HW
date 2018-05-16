@@ -9,6 +9,7 @@
 import UIKit
 
 class TimePickerView: UIView {
+    @IBOutlet weak var timerPickerView: UIView!
     @IBOutlet weak var timePickerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var timeDatePicker: UIDatePicker!
     
@@ -20,6 +21,7 @@ class TimePickerView: UIView {
     var _completed: completedClosure?
     
     func show(date: Date, completed: completedClosure? = nil) {
+        self.timerPickerView.center.y -= 180
         self.setupGestrueRecpgnizer()
         self.timeDatePicker.date = date
         
@@ -32,21 +34,19 @@ class TimePickerView: UIView {
     
     @IBAction func clickDone(_ sender: Any) {
         self.showPickerView(false)
-        self.removeFromSuperview()
+        self.removeView()
         _completed?(timeDatePicker.date)
     }
     
     func showPickerView(_ show: Bool) {
         if show {
             UIView.animate(withDuration: 0.3) {
-                self.timePickerHeightConstraint.constant = 180
-                self.layoutIfNeeded()
+                self.timerPickerView.center.y -= 180
             }
             
         } else {
             UIView.animate(withDuration: 0.3) {
-                self.timePickerHeightConstraint.constant = 0
-                self.layoutIfNeeded()
+                self.timerPickerView.center.y += 180
             }
         }
     }
@@ -58,7 +58,13 @@ class TimePickerView: UIView {
     
     @objc func tap(_ sender:UITapGestureRecognizer!) {
         self.showPickerView(false)
-        self.removeFromSuperview()
+        self.removeView()
+    }
+    
+    func removeView() {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+0.3) {
+            self.removeFromSuperview()
+        }
     }
     
 }

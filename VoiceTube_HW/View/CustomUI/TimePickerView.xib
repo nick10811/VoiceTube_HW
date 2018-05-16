@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJu-uX-0Le" userLabel="timePickerView">
-                    <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                    <rect key="frame" x="0.0" y="487" width="375" height="180"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xti-NR-PG5">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -44,7 +44,7 @@
                             </constraints>
                         </view>
                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Vt-bv-36P">
-                            <rect key="frame" x="0.0" y="-150" width="375" height="150"/>
+                            <rect key="frame" x="0.0" y="30" width="375" height="150"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="150" id="7MR-ol-8Km"/>
                             </constraints>
@@ -62,7 +62,7 @@
                         <constraint firstItem="5Vt-bv-36P" firstAttribute="leading" secondItem="xJu-uX-0Le" secondAttribute="leading" id="rOp-VS-0KU"/>
                         <constraint firstItem="xti-NR-PG5" firstAttribute="top" secondItem="xJu-uX-0Le" secondAttribute="top" id="tsl-nQ-czP"/>
                         <constraint firstAttribute="bottom" secondItem="5Vt-bv-36P" secondAttribute="bottom" id="ycd-eN-c5B"/>
-                        <constraint firstAttribute="height" id="zyh-Gm-rCW"/>
+                        <constraint firstAttribute="height" constant="180" id="zyh-Gm-rCW"/>
                     </constraints>
                 </view>
             </subviews>
@@ -76,6 +76,7 @@
             <connections>
                 <outlet property="timeDatePicker" destination="5Vt-bv-36P" id="gAo-Yy-DV0"/>
                 <outlet property="timePickerHeightConstraint" destination="zyh-Gm-rCW" id="cc2-Td-TZD"/>
+                <outlet property="timerPickerView" destination="xJu-uX-0Le" id="0iP-Yp-FhD"/>
             </connections>
         </view>
     </objects>
