@@ -50,6 +50,7 @@
 		9429B4CC20AC163C00BF3062 /* VideoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4CB20AC163C00BF3062 /* VideoServiceTests.swift */; };
 		9429B4CE20AC1F1C00BF3062 /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4CD20AC1F1C00BF3062 /* SettingViewModelTests.swift */; };
 		9429B4D020AC571D00BF3062 /* VideoViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9429B4CF20AC571D00BF3062 /* VideoViewModelTests.swift */; };
+		94A8429620AD0F090009D3D3 /* CommonErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A8429520AD0F090009D3D3 /* CommonErrorEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,7 @@
 		9429B4CB20AC163C00BF3062 /* VideoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoServiceTests.swift; sourceTree = "<group>"; };
 		9429B4CD20AC1F1C00BF3062 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		9429B4CF20AC571D00BF3062 /* VideoViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModelTests.swift; sourceTree = "<group>"; };
+		94A8429520AD0F090009D3D3 /* CommonErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonErrorEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				9429591020A9A9D4004A78DF /* Founctions.swift */,
+				94A8429520AD0F090009D3D3 /* CommonErrorEnum.swift */,
 			);
 			path = Utiles;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				9429591320A9ABF1004A78DF /* VideoService.swift in Sources */,
 				9429B4C220AB122800BF3062 /* FMDatabasePool.m in Sources */,
 				9429B49D20AAB0F200BF3062 /* SettingManager.swift in Sources */,
+				94A8429620AD0F090009D3D3 /* CommonErrorEnum.swift in Sources */,
 				9429B4A320AABB2800BF3062 /* BaseStringExtenstion.swift in Sources */,
 				9429B4AE20AB05F800BF3062 /* DBManager.swift in Sources */,
 				9429B4C120AB122800BF3062 /* FMDatabase.m in Sources */,

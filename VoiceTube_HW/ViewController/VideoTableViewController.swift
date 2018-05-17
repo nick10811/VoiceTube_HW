@@ -49,7 +49,7 @@ class VideoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for: indexPath) as! VideoCell
-        cell.setupUI(model: viewModel.modelAtIndex(indexPath: indexPath) as! VideoModel)
+        cell.setupUI(model: viewModel.modelAtIndex(indexPath: indexPath))
         
         return cell
     }

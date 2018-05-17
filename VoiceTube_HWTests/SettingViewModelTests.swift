@@ -22,7 +22,7 @@ class SettingViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSetStringValue() {
+    func testStringValue() {
         let testString = "true"
         viewModel.setStringValue(testString, type: .autoPlay)
         let storedString = viewModel.getStringValue(type: .autoPlay)
@@ -30,25 +30,53 @@ class SettingViewModelTests: XCTestCase {
         
     }
     
-    func testSetDateValue() {
+    func testDateValue() {
         // FIXME: this test has difference(0.000001) between testDate and storedDate
         let testDate = Date()
-        viewModel.setDateValue(testDate, type: .recommandVideo)
-        let storedDate = viewModel.getDateValue(type: .recommandVideo)
-        XCTAssert(testDate.timeIntervalSinceReferenceDate-storedDate.timeIntervalSinceReferenceDate <= 0)
+        
+        do {
+            try viewModel.setDateValue(testDate, type: .recommandVideo)
+            let storedDate = viewModel.getDateValue(type: .recommandVideo)
+            XCTAssert(testDate.timeIntervalSinceReferenceDate-storedDate.timeIntervalSinceReferenceDate <= 0)
+        } catch {
+            
+        }
+        
+        do {
+            try viewModel.setDateValue(testDate, type: .autoPlay)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+            XCTAssert(true)
+        } catch {
+            XCTAssert(false)
+        }
         
     }
     
-    func testSetBoolValue() {
-        var testBool: Bool = true
-        viewModel.setBoolValue(testBool, type: .autoPlay)
-        var storedBool = viewModel.getBoolValue(type: .autoPlay)
-        XCTAssert(testBool == storedBool)
+    func testBoolValue() {
+        do {
+            var testBool: Bool = true
+            try viewModel.setBoolValue(testBool, type: .autoPlay)
+            var storedBool = viewModel.getBoolValue(type: .autoPlay)
+            XCTAssert(testBool == storedBool)
+            
+            testBool = false
+            try viewModel.setBoolValue(testBool, type: .autoPlay)
+            storedBool = viewModel.getBoolValue(type: .autoPlay)
+            XCTAssert(testBool == storedBool)
+            
+        } catch {
+            
+        }
         
-        testBool = false
-        viewModel.setBoolValue(testBool, type: .autoPlay)
-        storedBool = viewModel.getBoolValue(type: .autoPlay)
-        XCTAssert(testBool == storedBool)
+        do {
+            try viewModel.setBoolValue(true, type: .reminderTime)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+            XCTAssert(true)
+        } catch {
+            XCTAssert(false)
+        }
         
     }
     

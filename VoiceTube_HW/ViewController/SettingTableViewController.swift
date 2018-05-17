@@ -41,26 +41,56 @@ class SettingTableViewController: UITableViewController {
     }
 
     @IBAction func switchAutoPlay(_ sender: Any) {
-        viewModel.setBoolValue(self.autoPlaySwitch.isOn, type: .autoPlay)
+        do {
+            try viewModel.setBoolValue(self.autoPlaySwitch.isOn, type: .autoPlay)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+        } catch {
+            printLog(.error, "Unkown Error")
+        }
     }
     
     @IBAction func switchsubtitleSync(_ sender: Any) {
-        viewModel.setBoolValue(self.subtitleSyncSwitch.isOn, type: .subtitleSync)
+        do {
+            try viewModel.setBoolValue(self.subtitleSyncSwitch.isOn, type: .subtitleSync)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+        } catch {
+            printLog(.error, "Unkown Error")
+        }
     }
     
     @IBAction func switchStopPlayInSearchVocabulary(_ sender: Any) {
-        viewModel.setBoolValue(self.stopPlayInSearchVocabularySwitch.isOn, type: .stopPlayInSearchVocabulary)
+        do {
+            try viewModel.setBoolValue(self.stopPlayInSearchVocabularySwitch.isOn, type: .stopPlayInSearchVocabulary)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+        } catch {
+            printLog(.error, "Unkown Error")
+        }
     }
     
     @IBAction func switchRecommandVideo(_ sender: Any) {
-        viewModel.setBoolValue(self.recommandVideoSwitch.isOn, type: .recommandVideo)
+        do {
+            try viewModel.setBoolValue(self.recommandVideoSwitch.isOn, type: .recommandVideo)
+        } catch CommonError.invalidInput(let errorMessage) {
+            printLog(.error, errorMessage)
+        } catch {
+            printLog(.error, "Unkown Error")
+        }
     }
     
     @IBAction func clickReminderTime(_ sender: Any) {
         let selectedTime: Date = viewModel.getDateValue(type: .reminderTime)
         let pickerView = TimePickerView.instanceFromNib() as! TimePickerView
         pickerView.show(date: selectedTime) { (pickerDate) in
-            self.viewModel.setDateValue(pickerDate, type: .reminderTime)
+            do {
+                try self.viewModel.setDateValue(pickerDate, type: .reminderTime)
+            } catch CommonError.invalidInput(let errorMessage) {
+                printLog(.error, errorMessage)
+            } catch {
+                printLog(.error, "Unkown Error")
+            }
         }
     }
 }

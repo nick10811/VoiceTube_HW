@@ -21,7 +21,16 @@ class SettingViewModel: BaseViewModel {
         return getStringValue(type: type).convertToBool()
     }
     
-    func setBoolValue(_ value: Bool, type: SettingType) {
+    func setBoolValue(_ value: Bool, type: SettingType) throws {
+        guard type != .reminderTime else {
+            throw CommonError.invalidInput(
+                "Invalid Input! [INPUT TYPE]: \(type)\n" +
+                    "Accepted Type:\n" +
+                    "1. \(SettingType.autoPlay.rawValue)\n" +
+                    "2. \(SettingType.subtitleSync.rawValue)\n" +
+                    "3. \(SettingType.stopPlayInSearchVocabulary.rawValue)\n" +
+                "4. \(SettingType.recommandVideo.rawValue)\n")
+        }
         setStringValue(String(value), type: type)
     }
     
@@ -42,15 +51,18 @@ class SettingViewModel: BaseViewModel {
             return Date()
         }
         
-        if let stored = SettingManager.sharedInstance().loadObject(type.rawValue) {
-            return stored as! Date
+        if let stored = SettingManager.sharedInstance().loadObject(type.rawValue) as? Date {
+            return stored
         }
         return Date()
     }
     
-    func setDateValue(_ date: Date, type: SettingType) {
+    func setDateValue(_ date: Date, type: SettingType) throws {
         guard type == .reminderTime else {
-            return
+            throw CommonError.invalidInput(
+                "Invalid Input! [INPUT TYPE]: \(type)\n" +
+                    "Accepted Type:\n" +
+                "1. \(SettingType.reminderTime.rawValue)\n")
         }
         SettingManager.sharedInstance().saveObject(date as AnyObject, forKey: type.rawValue)
         self.loadingDelegate?.loadingDone()

@@ -34,7 +34,7 @@ class TimePickerView: UIView {
     @IBAction func clickDone(_ sender: Any) {
         self.showPickerView(false)
         self.removeView()
-        _completed?(timeDatePicker.date)
+        self._completed?(timeDatePicker.date)
     }
     
     func showPickerView(_ show: Bool) {
