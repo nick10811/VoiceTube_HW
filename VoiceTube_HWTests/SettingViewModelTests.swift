@@ -22,20 +22,33 @@ class SettingViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func testSetSettingValue() {
+    func testSetStringValue() {
         let testString = "true"
-        viewModel.setSettingValue(testString, type: .autoPlay)
-        let storedString = viewModel.getSettingValue(type: .autoPlay)
+        viewModel.setStringValue(testString, type: .autoPlay)
+        let storedString = viewModel.getStringValue(type: .autoPlay)
         XCTAssert(testString == storedString)
         
     }
     
-    func testSetTimeValue() {
+    func testSetDateValue() {
         // FIXME: this test has difference(0.000001) between testDate and storedDate
         let testDate = Date()
-        viewModel.setTimeValue(testDate, type: .recommandVideo)
-        let storedDate = viewModel.getTimeValue(type: .recommandVideo)
+        viewModel.setDateValue(testDate, type: .recommandVideo)
+        let storedDate = viewModel.getDateValue(type: .recommandVideo)
         XCTAssert(testDate.timeIntervalSinceReferenceDate-storedDate.timeIntervalSinceReferenceDate <= 0)
+        
+    }
+    
+    func testSetBoolValue() {
+        var testBool: Bool = true
+        viewModel.setBoolValue(testBool, type: .autoPlay)
+        var storedBool = viewModel.getBoolValue(type: .autoPlay)
+        XCTAssert(testBool == storedBool)
+        
+        testBool = false
+        viewModel.setBoolValue(testBool, type: .autoPlay)
+        storedBool = viewModel.getBoolValue(type: .autoPlay)
+        XCTAssert(testBool == storedBool)
         
     }
     

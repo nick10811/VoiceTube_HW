@@ -17,19 +17,27 @@ enum SettingType: String {
 }
 
 class SettingViewModel: BaseViewModel {
-    func getSettingValue(type: SettingType) -> String {
+    func getBoolValue(type: SettingType) -> Bool {
+        return getStringValue(type: type).convertToBool()
+    }
+    
+    func setBoolValue(_ value: Bool, type: SettingType) {
+        setStringValue(String(value), type: type)
+    }
+    
+    func getStringValue(type: SettingType) -> String {
         guard type == .reminderTime else {
             return SettingManager.sharedInstance().load(type.rawValue) ?? "true"
         }
-        return self.getTimeValue(type: .reminderTime).toString()
+        return self.getDateValue(type: .reminderTime).toString()
     }
     
-    func setSettingValue(_ value: String, type: SettingType) {
+    func setStringValue(_ value: String, type: SettingType) {
         SettingManager.sharedInstance().save(value, forKey: type.rawValue)
         self.loadingDelegate?.loadingDone()
     }
     
-    func getTimeValue(type: SettingType) -> Date {
+    func getDateValue(type: SettingType) -> Date {
         guard type == .reminderTime else {
             return Date()
         }
@@ -40,7 +48,7 @@ class SettingViewModel: BaseViewModel {
         return Date()
     }
     
-    func setTimeValue(_ date: Date, type: SettingType) {
+    func setDateValue(_ date: Date, type: SettingType) {
         guard type == .reminderTime else {
             return
         }

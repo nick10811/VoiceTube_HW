@@ -33,34 +33,34 @@ class SettingTableViewController: UITableViewController {
     }
     
     func setupUI() {
-        self.autoPlaySwitch.isOn = viewModel.getSettingValue(type: .autoPlay).convertToBool()
-        self.subtitleSyncSwitch.isOn = viewModel.getSettingValue(type: .subtitleSync).convertToBool()
-        self.stopPlayInSearchVocabularySwitch.isOn = viewModel.getSettingValue(type: .stopPlayInSearchVocabulary).convertToBool()
-        self.recommandVideoSwitch.isOn = viewModel.getSettingValue(type: .recommandVideo).convertToBool()
-        self.reminderTimeButton.setTitle(viewModel.getSettingValue(type: .reminderTime), for: .normal)
+        self.autoPlaySwitch.isOn = viewModel.getBoolValue(type: .autoPlay)
+        self.subtitleSyncSwitch.isOn = viewModel.getBoolValue(type: .subtitleSync)
+        self.stopPlayInSearchVocabularySwitch.isOn = viewModel.getBoolValue(type: .stopPlayInSearchVocabulary)
+        self.recommandVideoSwitch.isOn = viewModel.getBoolValue(type: .recommandVideo)
+        self.reminderTimeButton.setTitle(viewModel.getStringValue(type: .reminderTime), for: .normal)
     }
 
     @IBAction func switchAutoPlay(_ sender: Any) {
-        viewModel.setSettingValue(String(self.autoPlaySwitch.isOn), type: .autoPlay)
+        viewModel.setBoolValue(self.autoPlaySwitch.isOn, type: .autoPlay)
     }
     
     @IBAction func switchsubtitleSync(_ sender: Any) {
-        viewModel.setSettingValue(String(self.subtitleSyncSwitch.isOn), type: .subtitleSync)
+        viewModel.setBoolValue(self.subtitleSyncSwitch.isOn, type: .subtitleSync)
     }
     
     @IBAction func switchStopPlayInSearchVocabulary(_ sender: Any) {
-        viewModel.setSettingValue(String(self.stopPlayInSearchVocabularySwitch.isOn), type: .stopPlayInSearchVocabulary)
+        viewModel.setBoolValue(self.stopPlayInSearchVocabularySwitch.isOn, type: .stopPlayInSearchVocabulary)
     }
     
     @IBAction func switchRecommandVideo(_ sender: Any) {
-        viewModel.setSettingValue(String(self.recommandVideoSwitch.isOn), type: .recommandVideo)
+        viewModel.setBoolValue(self.recommandVideoSwitch.isOn, type: .recommandVideo)
     }
     
     @IBAction func clickReminderTime(_ sender: Any) {
-        let selectedTime: Date = viewModel.getTimeValue(type: .reminderTime)
+        let selectedTime: Date = viewModel.getDateValue(type: .reminderTime)
         let pickerView = TimePickerView.instanceFromNib() as! TimePickerView
         pickerView.show(date: selectedTime) { (pickerDate) in
-            self.viewModel.setTimeValue(pickerDate, type: .reminderTime)
+            self.viewModel.setDateValue(pickerDate, type: .reminderTime)
         }
     }
 }

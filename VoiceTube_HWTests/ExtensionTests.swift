@@ -40,11 +40,13 @@ class ExtensionTests: XCTestCase {
     func testDateToString() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
-        var testDate: Date = dateFormatter.date(from: "20:30")!
-        XCTAssert(testDate.toString() == "08:30 PM")
+        if let testDate: Date = dateFormatter.date(from: "20:30") {
+            XCTAssert(testDate.toString() == "08:30 PM")
+        }
         
-        testDate = dateFormatter.date(from: "07:15")!
-        XCTAssert(testDate.toString() == "07:15 AM")
+        if let testDate = dateFormatter.date(from: "07:15") {
+            XCTAssert(testDate.toString() == "07:15 AM")
+        }
     }
     
 }
